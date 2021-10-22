@@ -1,5 +1,4 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 const licenseBadge = badge => {
   if (badge === "MIT License") {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -34,14 +33,16 @@ Copyright 2009 - 2013 Adobe Systems Incorporated. All Rights Reserved.
     return `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
     THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC LICENSE ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.
     For more information visit: https://www.eclipse.org/legal/epl-v10.html`
-
+  }
+  else {
+    return "";
   }
 }
 
 
 // TODO: Create a function to generate markdown for README
-const generateReadMe = ({ title, description, installation, usage, credits, tests, features, username, email, image }) =>
-
+const generateMarkdown = () =>
+// ({ title, description, installation, usage, credits, tests, features, username, email, image }) =>
 `
 
 #${title}
@@ -93,14 +94,5 @@ ${contribute}
 ${tests}
 `;
 
-const init = () => {
-  promptUser()
-  // Use writeFileSync method to use promises instead of a callback function
-    .then((answers) => fs.writeFileSync('README.md', generateReadMe(answers)))
-    .then(() => console.log('Successfully wrote to README.md!'))
-    .catch((err) => console.error(err));
-};
-
-init();
 
 module.exports = generateMarkdown;

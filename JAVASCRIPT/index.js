@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+const generateMarkdown = require("./generateMarkdown")
 
 // TODO: Create an array of questions for user input
 const promptUser = () => {
@@ -68,22 +69,23 @@ const promptUser = () => {
             name: 'test'
         },
     ])
-};
+}
+promptUser();
 
 // TODO: Create a function to write README file
-.then((answers) => {
-    const readMeContent = generateReadMe(answers);
-
-    fs.writeFile('README.md', readMeContent, (err) =>
-        err ? console.log(err) : console.log('Successfully created README.md file!')
-        );
-});
-
-
 // function writeToFile(fileName, data) {}
 
+
+const init = () => {
+    promptUser()
+    // Use writeFileSync method to use promises instead of a callback function
+        .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
+        .then(() => console.log('Successfully wrote to README.md!'))
+        .catch((err) => console.error(err));
+};
+
 // TODO: Create a function to initialize app
-function init() {}
+
 
 // Function call to initialize app
-init();
+// init();
