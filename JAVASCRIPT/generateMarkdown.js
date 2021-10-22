@@ -40,11 +40,9 @@ Copyright 2009 - 2013 Adobe Systems Incorporated. All Rights Reserved.
 
 
 // TODO: Create a function to generate markdown for README
-// const generateReadMe = ({ title, description, installation, usage, credits, test, license, features, username, email, image }) 
+const generateReadMe = ({ title, description, installation, usage, credits, tests, features, username, email, image }) =>
 
-
-function generateMarkdown(data) {
-  return `
+`
 
 #${title}
 
@@ -93,10 +91,16 @@ ${contribute}
 
 ## Tests
 ${tests}
-
-
-
 `;
-}
+
+const init = () => {
+  promptUser()
+  // Use writeFileSync method to use promises instead of a callback function
+    .then((answers) => fs.writeFileSync('README.md', generateReadMe(answers)))
+    .then(() => console.log('Successfully wrote to README.md!'))
+    .catch((err) => console.error(err));
+};
+
+init();
 
 module.exports = generateMarkdown;
