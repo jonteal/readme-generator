@@ -72,14 +72,68 @@ const promptUser = () => {
 }
 promptUser();
 
+
+
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
+
+// const generateMarkdown = ({ title, description, installation, usage, credits, tests, features, username, email, image }) =>
+// `
+// #${title}
+
+// ## Description
+// ${description}
+
+// ## Table of Contents
+// - [Installation](#installation)
+// - [Usage](#usage)
+// - [Credits](#credits)
+// - [License](#license)
+// - [Features](#features)
+// - [Github Profile](#github)
+// - [Email](#email)
+// - [Screenshot](#screenshot)
+// - [Contribute](#contribute)
+// - [Tests](#tests)
+
+
+// ## Installation
+// ${installation}
+
+// ## Usage
+// ${usage}
+
+// ## Credits
+// ${credits}
+
+// ## License
+// ${licenseBadge}
+
+// ## Features
+// ${features}
+
+// ## Github Profile
+// ${username}
+
+// ## Email Address
+// ${email}
+
+// ## Screenshot
+// ${image}
+
+// ## How to Contribute
+// ${contribute}
+
+// ## Tests
+// ${tests}
+// `;
+
 
 
 const init = () => {
     promptUser()
     // Use writeFileSync method to use promises instead of a callback function
-        .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
+        .then((data) => fs.writeFileSync('README.md', generateMarkdown(data)))
         .then(() => console.log('Successfully wrote to README.md!'))
         .catch((err) => console.error(err));
 };

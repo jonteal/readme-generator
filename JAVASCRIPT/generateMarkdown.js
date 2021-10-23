@@ -41,10 +41,14 @@ Copyright 2009 - 2013 Adobe Systems Incorporated. All Rights Reserved.
 
 
 // TODO: Create a function to generate markdown for README
-const generateMarkdown = () =>
-// ({ title, description, installation, usage, credits, tests, features, username, email, image }) =>
-`
+// function generateMarkdown(data) {
+//   return `# ${data.title}
+// `;
+// }
 
+
+const generateMarkdown = ({ title, description, installation, usage, credits, tests, features, username, email, image }) =>
+`
 #${title}
 
 ## Description
