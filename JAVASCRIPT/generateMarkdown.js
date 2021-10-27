@@ -44,7 +44,7 @@ Copyright 2009 - 2013 Adobe Systems Incorporated. All Rights Reserved.
 
 const generateMarkdown = ({ title, description, installation, usage, credits, license, features, contribute, tests, username, email }) =>
 `
-#${title}
+# ${title}
 
 ## Description
 ${description}
