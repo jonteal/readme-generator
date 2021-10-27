@@ -1,5 +1,4 @@
-
-# My New App
+# README Generator (SAMPLE)
 
 ## Description
 This professional README generator was created to save time in the development process of applications so the user can spend more time coding and less time formatting their README files.
@@ -14,7 +13,7 @@ This professional README generator was created to save time in the development p
 - [Tests](#tests)
 
 ## Installation
-In order to use this professional README generator, the user can clone the repository using "git clone https://github.com/jonteal/readme-generator". Next, be sure you are in the working directory. Then, install the application dependencies by running "npm i" in the terminal. Lastly, run the project by typing "node index.js" in the terminal.
+In order to use this professional README generator, the user may clone the repository using "git clone https://github.com/jonteal/readme-generator". Next, be sure you are in the working directory. Then, install the application dependencies by running "npm i" in the terminal. Lastly, run the project by typing "node index.js" in the terminal.
 
 ## Usage
 In order to access the input prompts for the README generator, the user needs to open the terminal in the integrated terminal for the index.js file. Then type in "node index.js" and hit enter, at which point the questions will start to appear. Answer each one in succession, and after the last question is answered, the README file will be generated.
@@ -40,3 +39,10 @@ No tests at this time.
 
 ## Questions
 If you have further questions, my Github profile is jonteal and my email address is jonjacksonvibes@gmail.com!
+
+## Walkthrough Video Link
+https://drive.google.com/file/d/1f_KSYAWs3KG96Hi-7Msm_OAf2FNyUSgA/view
+
+## Github Profile
+https://github.com/jonteal/readme-generator
+
