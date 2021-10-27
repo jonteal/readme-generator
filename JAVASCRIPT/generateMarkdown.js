@@ -40,14 +40,9 @@ Copyright 2009 - 2013 Adobe Systems Incorporated. All Rights Reserved.
 }
 
 
-// TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-// `;
-// }
 
 
-const generateMarkdown = ({ title, description, installation, usage, credits, tests, features, username, email, image }) =>
+const generateMarkdown = ({ title, description, installation, usage, credits, license, features, contribute, tests, username, email }) =>
 `
 #${title}
 
@@ -60,12 +55,8 @@ ${description}
 - [Credits](#credits)
 - [License](#license)
 - [Features](#features)
-- [Github Profile](#github)
-- [Email](#email)
-- [Screenshot](#screenshot)
-- [Contribute](#contribute)
+- [Contributing](#contributing)
 - [Tests](#tests)
-
 
 ## Installation
 ${installation}
@@ -77,25 +68,20 @@ ${usage}
 ${credits}
 
 ## License
-${licenseBadge}
+${licenseBadge(license)}
 
 ## Features
 ${features}
 
-## Github Profile
-${username}
-
-## Email Address
-${email}
-
-## Screenshot
-${image}
-
-## How to Contribute
+## Contributing
 ${contribute}
 
 ## Tests
 ${tests}
+
+## Questions
+If you have further questions, my Github profile is ${username} and my email address is ${email}!
+
 `;
 
 

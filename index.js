@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateMarkdown = require("./generateMarkdown")
+const generateMarkdown = require("./JAVASCRIPT/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const promptUser = () => {
@@ -45,6 +45,11 @@ const promptUser = () => {
         },
         {
             type: 'input',
+            message: 'Please enter guidelines for contributing to this project.',
+            name: 'contribute'
+        },
+        {
+            type: 'input',
             message: 'Enter your GitHub username',
             name: 'username'
         },
@@ -55,79 +60,11 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            message: 'Enter image URL',
-            name: 'image'
-        },
-        {
-            type: 'input',
-            message: 'If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so here.',
-            name: 'image'
-        },
-        {
-            type: 'input',
             message: 'Go the extra mile and write tests for your application. Then provide examples on how to run them here.',
-            name: 'test'
+            name: 'tests'
         },
     ])
 }
-promptUser();
-
-
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// const generateMarkdown = ({ title, description, installation, usage, credits, tests, features, username, email, image }) =>
-// `
-// #${title}
-
-// ## Description
-// ${description}
-
-// ## Table of Contents
-// - [Installation](#installation)
-// - [Usage](#usage)
-// - [Credits](#credits)
-// - [License](#license)
-// - [Features](#features)
-// - [Github Profile](#github)
-// - [Email](#email)
-// - [Screenshot](#screenshot)
-// - [Contribute](#contribute)
-// - [Tests](#tests)
-
-
-// ## Installation
-// ${installation}
-
-// ## Usage
-// ${usage}
-
-// ## Credits
-// ${credits}
-
-// ## License
-// ${licenseBadge}
-
-// ## Features
-// ${features}
-
-// ## Github Profile
-// ${username}
-
-// ## Email Address
-// ${email}
-
-// ## Screenshot
-// ${image}
-
-// ## How to Contribute
-// ${contribute}
-
-// ## Tests
-// ${tests}
-// `;
-
 
 
 const init = () => {
@@ -142,4 +79,4 @@ const init = () => {
 
 
 // Function call to initialize app
-// init();
+init();
