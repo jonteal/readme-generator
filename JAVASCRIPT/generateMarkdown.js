@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Function that returns a license badge based on which license is passed in using 'If' statements.
 const licenseBadge = badge => {
   if (badge === "MIT License") {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -41,7 +41,7 @@ Copyright 2009 - 2013 Adobe Systems Incorporated. All Rights Reserved.
 
 
 
-
+// Variable that holds data variables that pass in user information that generates the markdown file.
 const generateMarkdown = ({ title, description, installation, usage, credits, license, features, contribute, tests, username, email }) =>
 `
 # ${title}
@@ -80,9 +80,9 @@ ${contribute}
 ${tests}
 
 ## Questions
-If you have further questions, my Github profile is ${username} and my email address is ${email}!
+If you have further questions or comments, my Github profile is ${username} and my email address is ${email}!
 
 `;
 
-
+// Export feature
 module.exports = generateMarkdown;
